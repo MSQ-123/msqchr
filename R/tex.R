@@ -1,9 +1,9 @@
 #' Fasta file of chromosome sequence produced from all_text
 #'
-#' A dataset containing the hg19 chromosome sequence from the
-#' hg19 blacklist.
+#' A downsampled dataset containing the hg19 chromosome sequence
+#' from the hg19 blacklist.
 #'
-#' @format A large list containing 411 elements
+#' @format A large list containing 62 elements
 #' @details Please first refer to the document of all_text dataset.
 #' The all_text dataset is transformed into tex by using
 #' read_aslist function.

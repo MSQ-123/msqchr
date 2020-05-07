@@ -15,9 +15,7 @@ read_aslist <- function(id = id, all_text = all_text){
   tex = list()
   for(i in 1:(length(pos)-1)){
     tex[[i]] = all_text[pos[i]:(pos[i+1]-pos[i])]
-    if (i == (length(pos)-1)){
-      tex[[i+1]] <- all_text[pos[i]:(pos[i+1]-pos[i])]
-    }
   }
+  tex[[length(pos)]] <- all_text[pos[length(pos)]:(pos[length(pos)]+length(all_text)-pos[length(pos)])]
   return(tex)
 }

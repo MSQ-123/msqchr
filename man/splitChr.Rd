@@ -4,7 +4,7 @@
 \alias{splitChr}
 \title{Split all chromosomes from the sorted chromosome list}
 \usage{
-splitChr(tex = tex2, chr = chr, sex = FALSE)
+splitChr(tex = tex, chr = chr, sex = FALSE)
 }
 \arguments{
 \item{tex}{The sorted chromosome list made by sort_list.}
@@ -20,8 +20,12 @@ Write the splitted chromosome fasta file to separated txt file according to the 
 Split all chromosomes from the sorted chromosome list
 }
 \examples{
-data("tex2")
-data("tex3")
+data("tex")
+data("all_text")
+all_text<- replace_all_text(input_type = "all_text",input = all_text)
+id <- sub_fasID(all_text = all_text)
+tex2<- sort_list(id=id,tex = tex,chrsig = "single")
+tex3 <- sort_list(id=id,tex = tex,chrsig = "double")
 splitChr(tex = tex2,chr=seq(1,9),sex = TRUE)
 #chromosome X or Y is "single",so the tex should be a
 #"single" chromosome list.

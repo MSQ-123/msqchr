@@ -8,14 +8,18 @@
 #' @export
 #'
 #' @examples
-#' data("tex2")
-#' data("tex3")
+#' data("tex")
+#' data("all_text")
+#' all_text<- replace_all_text(input_type = "all_text",input = all_text)
+#' id <- sub_fasID(all_text = all_text)
+#' tex2<- sort_list(id=id,tex = tex,chrsig = "single")
+#' tex3 <- sort_list(id=id,tex = tex,chrsig = "double")
 #' splitChr(tex = tex2,chr=seq(1,9),sex = TRUE)
 #' #chromosome X or Y is "single",so the tex should be a
 #' #"single" chromosome list.
 #' #In the below case, sex should be F.
 #' splitChr(tex = tex3,chr=seq(10,22),sex = FALSE)
-splitChr <- function(tex = tex2,chr=chr,sex = FALSE){
+splitChr <- function(tex = tex,chr=chr,sex = FALSE){
   pos2 <- list()
   for(eachchr in chr){
     t <- unlist(lapply(lapply(tex, function(x){grep(strsplit(x,split = ":")[[1]][1],
@@ -47,7 +51,7 @@ splitChr <- function(tex = tex2,chr=chr,sex = FALSE){
                           function(x){ifelse(x == 0, FALSE, TRUE)}))
     pos_x <- length(t_X)
     fil2 <- list()
-    Xnum <- tail(chr,1)+1
+    Xnum <- utils::tail(chr,1)+1
     fil[[Xnum]] <- unlist(tail(tex,pos_x))
     write(fil[[Xnum]],file = paste("sex_chrom",".txt",sep = ""))
   }

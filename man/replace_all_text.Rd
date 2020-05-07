@@ -4,7 +4,7 @@
 \alias{replace_all_text}
 \title{Replace tedious chromosome id into simple format}
 \usage{
-replace_all_text(input_type = "all_text", input = all_text)
+replace_all_text(input_type = "all_text", input = input)
 }
 \arguments{
 \item{input_type}{This can be either "all_text" or "list", The previous is Large character containing each line of the fasta file, the latter is a list in which each element contains a unit of fasta file.}
@@ -19,6 +19,6 @@ Make the chromosome id started with ">" into simple format like:
 ">chr:1091194-1093520...",this is helpful for sorting the chromosome according to their number
 }
 \examples{
-data("all_text")
-all_text<- replace_all_text(input_type = "all_text",input = all_text)
+data("complicated_id")
+all_text<- replace_all_text(input_type = "all_text",input = complicated_id)
 }

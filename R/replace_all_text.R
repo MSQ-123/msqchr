@@ -9,9 +9,9 @@
 #' @export
 #'
 #' @examples
-#' data("all_text")
-#' all_text<- replace_all_text(input_type = "all_text",input = all_text)
-replace_all_text <- function(input_type = "all_text",input = all_text){
+#' data("complicated_id")
+#' all_text<- replace_all_text(input_type = "all_text",input = complicated_id)
+replace_all_text <- function(input_type = "all_text",input = input){
   if(input_type == "all_text"){
     for (i in 1:length(input)) {
       if(strsplit(input[i],split = "")[[1]][1] == ">"){
