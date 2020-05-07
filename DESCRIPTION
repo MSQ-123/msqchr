@@ -3,8 +3,9 @@ Title: split chromosome fasta file
 Version: 0.0.0.9000
 Authors@R: 
  person("Shaoqian Ma", email = "897341109@qq.com", role = c("aut", "cre"))
-Description: Some fasta file contains all chromosomes from one genome，sometimes users have to split these chromosomes into different files according to their number label.The msqchr can help to handle this, so that the choosed chromosome fasta file can be used for downstream analysis like motif finding.
-License: MIT + file LICENSE 
+Description: Some fasta files contain all chromosomes from one genome，sometimes users have to split these chromosomes into different files according to their number label.The msqchr can help to handle this, so that the choosed chromosome fasta file can be used for downstream analysis like motif finding.
+BugReports: https://github.com/MSQ-123/msqchr/issues
+License: GPL-3
 URL: https://github.com/MSQ-123/msqchr
 Encoding: UTF-8
 LazyData: true
@@ -13,4 +14,3 @@ Depends: R(>= 2.10)
 Imports: 
     utils,
     base
-
