@@ -1,13 +1,14 @@
 Package: msqchr
-Title: What the Package Does (One Line, Title Case)
+Title: split chromosome fasta file 
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+ person("Shaoqian Ma", email = "897341109@qq.com", role = c("aut", "cre"))
+Description: Some fasta file contains all chromosomes from one genome，sometimes users have to split these chromosomes into different files according to their number label.The msqchr can help to handle this, so that the choosed chromosome fasta file can be used for downstream analysis like motif finding.
+License: MIT + file LICENSE 
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.0.2
+Depends: R(>= 2.10)
+Imports: 
+    utils,
+    base
