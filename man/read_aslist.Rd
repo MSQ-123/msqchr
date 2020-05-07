@@ -9,9 +9,9 @@ read_aslist(id = id, all_text = all_text, con = con)
 \arguments{
 \item{id}{The id list made from sub_fasID function.}
 
-\item{all_text}{Large character read by readLines function from fasta file.}
+\item{all_text}{Large character read in by readLines function from fasta file.}
 
-\item{con}{A connection object or a character string.}
+\item{con}{A connection object or a character string, the connection must refer to the same fasta file as all_text.}
 }
 \value{
 Chromosome fasta file in list format.
