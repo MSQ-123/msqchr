@@ -34,4 +34,5 @@ use_package("utils")
 use_readme_rmd()
 ?usethis::use_build_ignore()
 usethis::use_vignette("msq-vignette")
-
+use_readme_rmd()
+rmarkdown::render("README.Rmd")

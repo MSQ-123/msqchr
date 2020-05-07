@@ -6,6 +6,7 @@
 #'
 #' @return Write the splitted chromosome fasta file to separated txt file according to the chromosome number.
 #' @export
+#' @importFrom utils tail
 #'
 #' @examples
 #' data("tex")
