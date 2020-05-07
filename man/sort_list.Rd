@@ -7,15 +7,15 @@
 sort_list(id = id, tex = tex, chrsig = "single")
 }
 \arguments{
-\item{id}{The id list of the fasta file made by sub_fasID.}
+\item{id}{The identifier list of the fasta file made by sub_fasID.}
 
-\item{tex}{A chromosome list made by read_aslist}
+\item{tex}{A chromosome fasta file in list format made by read_aslist}
 
-\item{chrsig}{The number of characters of the chromosome. Either "single" or "double". eg."chr1,chrX,chrY,chrM" is "single","chr10,chr11" is "double".
+\item{chrsig}{The number of characters of the chromosome. Either "single"(means a single character following "chr" in the fasta identifier) or "double"(means two characters following "chr" in the fasta identifier). eg."chr1,chrX,chrY,chrM" is "single";"chr10,chr11" is "double".
 If you want to obtain both "single" and "double" sorted list of chromosome, try "single" and "double" respectively.}
 }
 \value{
-The sorted chromosome list.
+The sorted chromosome fasta file in list format
 }
 \description{
 Sort the chromosome list  according to the chromosome number

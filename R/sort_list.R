@@ -1,11 +1,11 @@
 #' Sort the chromosome list  according to the chromosome number
 #'
-#' @param id The id list of the fasta file made by sub_fasID.
-#' @param tex A chromosome list made by read_aslist
-#' @param chrsig The number of characters of the chromosome. Either "single" or "double". eg."chr1,chrX,chrY,chrM" is "single","chr10,chr11" is "double".
+#' @param id The identifier list of the fasta file made by sub_fasID.
+#' @param tex A chromosome fasta file in list format made by read_aslist
+#' @param chrsig The number of characters of the chromosome. Either "single"(means a single character following "chr" in the fasta identifier) or "double"(means two characters following "chr" in the fasta identifier). eg."chr1,chrX,chrY,chrM" is "single";"chr10,chr11" is "double".
 #' If you want to obtain both "single" and "double" sorted list of chromosome, try "single" and "double" respectively.
 #'
-#' @return The sorted chromosome list.
+#' @return The sorted chromosome fasta file in list format
 #' @export
 #'
 #' @examples

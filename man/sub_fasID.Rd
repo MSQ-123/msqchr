@@ -2,18 +2,18 @@
 % Please edit documentation in R/sub_fasID.R
 \name{sub_fasID}
 \alias{sub_fasID}
-\title{Subtract chromosome id from fasta file}
+\title{Subtract chromosome ids from fasta file}
 \usage{
 sub_fasID(all_text = all_text)
 }
 \arguments{
-\item{all_text}{Large character read by readLines from fasta file.}
+\item{all_text}{Large character read by readLines from chromosome fasta file.}
 }
 \value{
-The id list of the fasta file
+The id list of the fasta file(fasta identifier), refer to http://genetics.bwh.harvard.edu/pph/FASTA.html
 }
 \description{
-Subtract chromosome id from fasta file
+Subtract chromosome ids from fasta file
 }
 \examples{
 data("all_text")

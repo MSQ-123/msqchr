@@ -1,8 +1,8 @@
-#' Subtract chromosome id from fasta file
+#' Subtract chromosome ids from fasta file
 #'
-#' @param all_text Large character read by readLines from fasta file.
+#' @param all_text Large character read by readLines from chromosome fasta file.
 #'
-#' @return The id list of the fasta file
+#' @return The id list of the fasta file(fasta identifier), refer to http://genetics.bwh.harvard.edu/pph/FASTA.html
 #' @export
 #'
 #' @examples

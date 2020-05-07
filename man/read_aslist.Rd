@@ -4,15 +4,17 @@
 \alias{read_aslist}
 \title{Make a list file from large character file}
 \usage{
-read_aslist(id = id, all_text = all_text)
+read_aslist(id = id, all_text = all_text, con = con)
 }
 \arguments{
 \item{id}{The id list made from sub_fasID function.}
 
 \item{all_text}{Large character read by readLines function from fasta file.}
+
+\item{con}{A connection object or a character string.}
 }
 \value{
-A chromosome list file
+Chromosome fasta file in list format.
 }
 \description{
 Make a list file from large character file
@@ -20,5 +22,8 @@ Make a list file from large character file
 \examples{
 data("all_text")
 id <- sub_fasID(all_text = all_text)
-tex <- read_aslist(id,all_text = all_text)
+fil <- tempfile(fileext = ".data")
+write(all_text,file = fil)
+con0 <- file(fil, "r")
+tex <- read_aslist(id,all_text = all_text,con = con0)
 }

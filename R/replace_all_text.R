@@ -1,11 +1,11 @@
-#' Replace tedious chromosome id into simple format
+#' Replace tedious chromosome identifier into simple format
 #'
-#' Make the chromosome id started with ">" into simple format like:
+#' Make the chromosome id starting with ">" into simple format like:
 #' ">chr:1091194-1093520...",this is helpful for sorting the chromosome according to their number
-#' @param input_type This can be either "all_text" or "list", The previous is Large character containing each line of the fasta file, the latter is a list in which each element contains a unit of fasta file.
+#' @param input_type This can be either "all_text" or "list", The previous is a large character containing each line of the fasta file, the latter is a list in which each element contains a unit of fasta file.
 #' @param input The large character or list containing ids that need to be simplified.
 #'
-#' @return The all_text or list with simplified id
+#' @return The large character or list of Chromosome fasta file with simplified id
 #' @export
 #'
 #' @examples

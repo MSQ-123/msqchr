@@ -9,12 +9,12 @@ splitChr(tex = tex, chr = chr, sex = FALSE)
 \arguments{
 \item{tex}{The sorted chromosome list made by sort_list.}
 
-\item{chr}{The chromosome sequence,if the chromosome list is "single", try seq(1,9) because you should start with 1; if the chromosome list is "double", try seq(10,22) because you should start with 10.}
+\item{chr}{The chromosome number sequence,if the chromosome list is "single"(means a single character following "chr" in the fasta identifier), try seq(1,9), be sure that starting with 1; if the chromosome list is "double"(means two characters following "chr" in the fasta identifier), try seq(10,22), be sure that starting with 10 but the ending can be changed.}
 
 \item{sex}{Whether to output the sex chromosomes like X chromosome and Y chromosome.}
 }
 \value{
-Write the splitted chromosome fasta file to separated txt file according to the chromosome number.
+Write the splitted chromosome fasta file to separated txt files according to the chromosome number.
 }
 \description{
 Split all chromosomes from the sorted chromosome list
