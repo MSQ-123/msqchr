@@ -34,7 +34,10 @@ id <- sub_fasID(all_text = all_text)
 Transform the large character object into special list:
 
 ``` r
-tex <- read_aslist(id,all_text = all_text)
+fil <- tempfile(fileext = ".data")
+write(all_text,file = fil)
+con0 <- file(fil, "r")
+tex <- read_aslist(id,all_text = all_text,con = con0)
 ```
 
 Sort the chromosome list according to their number. Note: the “single”
