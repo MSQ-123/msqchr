@@ -19,25 +19,25 @@ Replace tedious chromosome identifier into simple format. So that the
 subtracted ids are easy to manipulate.
 
 ``` r
-data("complicated_id")
-all_text<- replace_all_text(input_type = "all_text",input = complicated_id)
+data("id")
+simpleID<- replaceText(type = "text",input = id)
 ```
 
 Subtract chromosome ids from a fasta file
 
 ``` r
-data("all_text")
-all_text<- replace_all_text(input_type = "all_text",input = all_text)
-id <- sub_fasID(all_text = all_text)
+data("text")
+text<- replaceText(type = "text",input = text)
+id <- subFasID(text = text)
 ```
 
 Transform the large character object into special list:
 
 ``` r
 fil <- tempfile(fileext = ".data")
-write(all_text,file = fil)
+write(text,file = fil)
 con0 <- file(fil, "r")
-tex <- read_aslist(id,all_text = all_text,con = con0)
+tex <- readToList(id,text = text,con = con0)
 ```
 
 Sort the chromosome list according to their number. Note: the “single”
@@ -45,17 +45,18 @@ and “double” chromosome should be sort separately. Note: This data is
 already sorted, this is just for expository purposes.
 
 ``` r
-tex2<- sort_list(id=id,tex = tex,chrsig = "single")
-tex3 <- sort_list(id=id,tex = tex,chrsig = "double")
+tex2<- sortList(id=id,tex = tex,chrsig = "single")
+tex3 <- sortList(id=id,tex = tex,chrsig = "double")
 ```
 
 Now we can split the chromosome fasta file into different files
 according to their number.
 
 ``` r
-splitChr(tex = tex2,chr=seq(1,9),sex = TRUE)
+outdir <- tempdir()
+splitChr(tex = tex2,chr=seq(1,9),sex = TRUE,outdir = outdir)
 #chromosome X or Y is "single",so the tex should be a
 #"single" chromosome list.
 #In the below case, sex should be F.
-splitChr(tex = tex3,chr=seq(10,22),sex = FALSE)
+splitChr(tex = tex3,chr=seq(10,22),sex = FALSE,outdir = outdir)
 ```

@@ -1,0 +1,75 @@
+#' Fasta file of chromosome sequence read in by readLines function
+#'
+#' A downsampled dataset containing the hg19 chromosome sequence
+#' from the hg19 blacklist. The hg19 blacklist is obtained from the supplementary
+#' dataset from the referenced article, and then it is sent to
+#' the UCSC Table Browser for obtaining the corresponding
+#' sequence file. The sequence file is processed with
+#' replaceText function to simplify the fasta id.To best
+#' illustate the usage, the sequence file is downsampled.
+#'
+#' @docType data
+#'
+#' @usage data(text)
+#'
+#' @format A character sequence with 2099 elements
+#'
+#' @keywords datasets
+#'
+#' @source \url{https://github.com/greenleaflab/10x-scatac-2019}
+#'
+#' @references Satpathy A T, Granja J M, Yost K E, et al. (2019) Nature biotechnology 37,925-936.
+#' (\href{https://www.ncbi.nlm.nih.gov/pubmed/31375813}{PubMed})
+#'
+#' @examples
+#' data("text")
+"text"
+
+#' Fasta file of chromosome sequence produced from text dataset
+#'
+#' A downsampled dataset containing the hg19 chromosome sequence
+#' from the hg19 blacklist. Please first refer to the document of
+#' text dataset.
+#' For splitting the text, please first transformed text
+#' into a list in which each element contains a chromosome fasta
+#' file. eg.The text dataset is transformed into tex.
+#'
+#' @docType data
+#'
+#' @usage data(tex)
+#'
+#' @format A large list containing 62 elements
+#'
+#' @keywords datasets
+#'
+#'
+#' @references Satpathy A T, Granja J M, Yost K E, et al. (2019) Nature biotechnology 37,925-936.
+#' (\href{https://www.ncbi.nlm.nih.gov/pubmed/31375813}{PubMed})
+#'
+#' @examples
+#' data(tex)
+"tex"
+
+#' Sampled Fasta file of chromosome sequence from hg19 blacklist
+#'
+#' This dataset is sampled from The hg19 blacklist.
+#' For splitting a chromosome fasta file, sometimes the
+#' fasta identifier is too complicated to manipulate. This data
+#' can be used to show how to simplify the fasta identifier.
+#'
+#' @docType data
+#'
+#' @usage data(id)
+#'
+#' @format A character sequence with 20 elements
+#'
+#' @keywords datasets
+#'
+#' @source \url{https://github.com/greenleaflab/10x-scatac-2019}
+#'
+#' @references Satpathy A T, Granja J M, Yost K E, et al. (2019) Nature biotechnology 37,925-936.
+#' (\href{https://www.ncbi.nlm.nih.gov/pubmed/31375813}{PubMed})
+#'
+#'@examples
+#'data(id)
+"id"

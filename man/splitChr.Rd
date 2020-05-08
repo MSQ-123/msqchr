@@ -4,14 +4,16 @@
 \alias{splitChr}
 \title{Split all chromosomes from the sorted chromosome list}
 \usage{
-splitChr(tex = tex, chr = chr, sex = FALSE)
+splitChr(tex = tex, chr = chr, sex = FALSE, outdir = outdir)
 }
 \arguments{
-\item{tex}{The sorted chromosome list made by sort_list.}
+\item{tex}{The sorted chromosome list made by sortList function.}
 
-\item{chr}{The chromosome number sequence,if the chromosome list is "single"(means a single character following "chr" in the fasta identifier), try seq(1,9), be sure that starting with 1; if the chromosome list is "double"(means two characters following "chr" in the fasta identifier), try seq(10,22), be sure that starting with 10 but the ending can be changed.}
+\item{chr}{The chromosome number sequence, if the chromosome list is "single"(means a single character following "chr" in the fasta identifier), try seq(1,9), be sure that starting with 1; if the chromosome list is "double"(means two characters following "chr" in the fasta identifier), try seq(10,22), be sure that starting with 10 but the ending can be changed.}
 
 \item{sex}{Whether to output the sex chromosomes like X chromosome and Y chromosome.}
+
+\item{outdir}{The output directory.}
 }
 \value{
 Write the splitted chromosome fasta file to separated txt files according to the chromosome number.
@@ -21,14 +23,19 @@ Split all chromosomes from the sorted chromosome list
 }
 \examples{
 data("tex")
-data("all_text")
-all_text<- replace_all_text(input_type = "all_text",input = all_text)
-id <- sub_fasID(all_text = all_text)
-tex2<- sort_list(id=id,tex = tex,chrsig = "single")
-tex3 <- sort_list(id=id,tex = tex,chrsig = "double")
-splitChr(tex = tex2,chr=seq(1,9),sex = TRUE)
+data("text")
+#simplify the fasta id
+text<- replaceText(type = "text",input = text)
+#subtract fasta id
+id <- subFasID(text = text)
+#sort fasta list
+tex2<- sortList(id=id,tex = tex,chrsig = "single")
+tex3 <- sortList(id=id,tex = tex,chrsig = "double")
+#split and output
+outdir <- tempdir()
 #chromosome X or Y is "single",so the tex should be a
-#"single" chromosome list.
-#In the below case, sex should be F.
-splitChr(tex = tex3,chr=seq(10,22),sex = FALSE)
+#single" chromosome list like tex2.
+splitChr(tex = tex2,chr=seq(1,9),sex = TRUE,outdir = outdir)
+#In the below case, sex should be FALSE.
+splitChr(tex = tex3,chr=seq(10,22),sex = FALSE,outdir = outdir)
 }

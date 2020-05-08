@@ -1,21 +1,21 @@
 #' Sort the chromosome list  according to the chromosome number
 #'
-#' @param id The identifier list of the fasta file made by sub_fasID.
-#' @param tex A chromosome fasta file in list format made by read_aslist
+#' @param id The identifier list of the fasta file made by subFasID.
+#' @param tex A chromosome fasta file in list format made by readToList function.
 #' @param chrsig The number of characters of the chromosome. Either "single"(means a single character following "chr" in the fasta identifier) or "double"(means two characters following "chr" in the fasta identifier). eg."chr1,chrX,chrY,chrM" is "single";"chr10,chr11" is "double".
 #' If you want to obtain both "single" and "double" sorted list of chromosome, try "single" and "double" respectively.
 #'
-#' @return The sorted chromosome fasta file in list format
+#' @return The sorted chromosome fasta file in list format.
 #' @export
 #'
 #' @examples
 #' data("tex")
-#' data("all_text")
-#' all_text<- replace_all_text(input_type = "all_text",input = all_text)
-#' id <- sub_fasID(all_text = all_text)
-#' tex2<- sort_list(id=id,tex = tex,chrsig = "single")
-#' tex3 <- sort_list(id=id,tex = tex,chrsig = "double")
-sort_list <- function(id = id,tex = tex,chrsig = "single"){
+#' data("text")
+#' text<- replaceText(type = "text",input = text)
+#' id <- subFasID(text = text)
+#' tex2<- sortList(id=id,tex = tex,chrsig = "single")
+#' tex3 <- sortList(id=id,tex = tex,chrsig = "double")
+sortList <- function(id = id,tex = tex,chrsig = "single"){
   id2 <- c()
   if(chrsig == "single"){
     for(i in 1:length(id)){
