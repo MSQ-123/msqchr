@@ -20,7 +20,7 @@ file. eg.The text dataset is transformed into tex.
 data(tex)
 }
 \references{
-Satpathy A T, Granja J M, Yost K E, et al. (2019) Nature biotechnology 37,925-936.
+Satpathy A T, Granja J M, Yost K E, et al. (2019) Nature biotechnology 37,925–936.
 (\href{https://www.ncbi.nlm.nih.gov/pubmed/31375813}{PubMed})
 }
 \keyword{datasets}
