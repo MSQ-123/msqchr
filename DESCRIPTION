@@ -8,6 +8,7 @@ Description: Some fasta files contain all chromosomes from one genome，
   to handle this, so that the specific chromosome 'fasta' file can 
   be used for downstream analysis like motif finding.  
   Satpathy A T, Granja J M, Yost K E, et al. (2019) <doi:10.1038/s41587-019-0206-z>.
+Maintainer: Shaoqian Ma <897341109@qq.com>
 BugReports: https://github.com/MSQ-123/msqchr/issues
 License: Apache License (>= 2.0)
 URL: https://github.com/MSQ-123/msqchr
