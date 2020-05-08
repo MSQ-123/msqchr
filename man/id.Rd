@@ -5,9 +5,6 @@
 \alias{id}
 \title{Sampled Fasta file of chromosome sequence from hg19 blacklist}
 \format{A character sequence with 20 elements}
-\source{
-\url{https://github.com/greenleaflab/10x-scatac-2019}
-}
 \usage{
 data(id)
 }

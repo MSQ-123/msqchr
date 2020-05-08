@@ -1,11 +1,13 @@
 #' Fasta file of chromosome sequence read in by readLines function
 #'
 #' A downsampled dataset containing the hg19 chromosome sequence
-#' from the hg19 blacklist. The hg19 blacklist is obtained from the supplementary
-#' dataset from the referenced article, and then it is sent to
-#' the UCSC Table Browser for obtaining the corresponding
-#' sequence file. The sequence file is processed with
-#' replaceText function to simplify the fasta id.To best
+#' from the hg19 blacklist. The hg19 blacklist is obtained from
+#' the supplementary dataset from "Massively parallel
+#' single-cell chromatin landscapes of human immune cell
+#' development and intratumoral T cell exhaustion.". The dataset
+#' is sent to the UCSC Table Browser for obtaining the
+#' corresponding sequence file. The sequence file is processed
+#' with replaceText function to simplify the fasta id. To best
 #' illustate the usage, the sequence file is downsampled.
 #'
 #' @docType data
@@ -16,7 +18,6 @@
 #'
 #' @keywords datasets
 #'
-#' @source \url{https://github.com/greenleaflab/10x-scatac-2019}
 #'
 #' @references Satpathy A T, Granja J M, Yost K E, et al. (2019) Nature biotechnology 37,925-936.
 #' (\href{https://www.ncbi.nlm.nih.gov/pubmed/31375813}{PubMed})
@@ -65,7 +66,6 @@
 #'
 #' @keywords datasets
 #'
-#' @source \url{https://github.com/greenleaflab/10x-scatac-2019}
 #'
 #' @references Satpathy A T, Granja J M, Yost K E, et al. (2019) Nature biotechnology 37,925-936.
 #' (\href{https://www.ncbi.nlm.nih.gov/pubmed/31375813}{PubMed})
